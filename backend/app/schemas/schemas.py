@@ -71,7 +71,7 @@ class RetrievedContextItem(BaseModel):
 class ClaimEvaluationItem(BaseModel):
     claim: str
     classification: str  # SUPPORTED, PARTIALLY_SUPPORTED, UNSUPPORTED, CONTRADICTED
-    score: float         # 1.0, 0.5, 0.0, 0.0
+    score: float         # continuous float in [0.0, 1.0]
     evidence: Optional[str] = None
     conflicting_text: Optional[str] = None
 
